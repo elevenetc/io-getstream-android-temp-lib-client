@@ -1,5 +1,6 @@
 package io.getstream.android.temp.lib.client
 
+import com.google.gson.Gson
 import okhttp3.Request
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,5 +45,13 @@ class Client {
             }
 
         }
+    }
+
+    fun useGson(): String {
+        return Gson().toJson(Hello())
+    }
+
+    class Hello {
+        val hello: String = "hello"
     }
 }
